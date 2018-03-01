@@ -2,7 +2,7 @@ import { call, put, takeLatest } from 'redux-saga/effects';
 import multiFactorAuthApi from './multiFactorAuthApi';
 import { createSecretRoutine } from './multiFactorAuthRoutines';
 
-export function* get2FaSecret(action) {
+export function* getMultiFactorAuthSecret(action) {
   try {
     const secretHolder = yield call(
       multiFactorAuthApi.createNewSecret,
@@ -15,8 +15,8 @@ export function* get2FaSecret(action) {
   }
 }
 
-function* create2FaSecretSaga() {
-  yield takeLatest(createSecretRoutine.TRIGGER, get2FaSecret);
+function* createMultiFactorAuthSecretSaga() {
+  yield takeLatest(createSecretRoutine.TRIGGER, getMultiFactorAuthSecret);
 }
 
-export default create2FaSecretSaga;
+export default createMultiFactorAuthSecretSaga;

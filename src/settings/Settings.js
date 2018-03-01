@@ -6,8 +6,7 @@ import variables from '../landing/variables';
 import { Header, Top, WrappedContent } from '../ui';
 import { withUser } from '../user';
 import type { User } from '../user/userState';
-import MultiFactorAuth from './multiFactorAuth';
-import { openConfirmationModal } from './multiFactorAuth/multiFactorAuthActions';
+import MultiFactorAuth, { openMultiFactorAuthModal } from './multiFactorAuth';
 
 const StyledList = styled.ul`
   margin-top: 20px;
@@ -59,7 +58,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  openMultiFactorAuthModal: openConfirmationModal,
+  openMultiFactorAuthModal,
 };
 
 const ConnectedSettings = connect(mapStateToProps, mapDispatchToProps)(
