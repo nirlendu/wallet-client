@@ -33,6 +33,7 @@ import { GoogleTagManager } from './tracker';
 import { cardOrderRoutes } from './card/order';
 import ResetPassword, { ResetPasswordDone } from './user/password/reset';
 import UpdatePassword from './user/password/update';
+import Verification from './verify/Verification';
 
 const animationEnter = keyframes`${slideInRight}`;
 
@@ -113,6 +114,10 @@ const startApp = () => {
                   <Route
                     path="/settings"
                     component={authenticatedPage(Settings)}
+                  />
+                  <Route
+                    path="/verify"
+                    component={authenticatedPage(Verification)}
                   />
                 </Switch>
                 <Route path="/sidebar">
