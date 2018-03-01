@@ -25,6 +25,7 @@ import LogoStrip from './LogoStrip';
 import Team from './Team';
 import Timeline from './Timeline';
 import Token from './Token';
+import imagedhass from './img/people/dhass.png';
 
 import { NavButton } from './ui';
 
@@ -133,6 +134,12 @@ export const About = () => (
           title: 'Partnerships',
           linkedin: 'http://bit.ly/2zuj9AS',
           image: imageDragos,
+        },
+        {
+          name: 'Carlos Matos',
+          title: 'Financially Independently',
+          linkedin: 'https://www.linkedin.com/in/carlosmatos1',
+          image: imagedhass,
         },
       ]}
     />
