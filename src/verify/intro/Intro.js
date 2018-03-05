@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import AppRouter, { routes } from '../../router';
 import { Button, Header, Paragraph, PrimaryButton, Top } from '../../ui';
 // import cardOrderApi from '../cardOrderApi';
-import { CARD_ORDER_PROFILE_ROUTE } from '../constants';
+import { VERIFICATION_PROFILE_ROUTE } from '../constants';
 
 const StyledHeader = styled(Header)`
   color: #2a2a2a;
@@ -21,22 +21,16 @@ const Links = styled(Paragraph)`
 `;
 
 type State = {
-  ordered: ?boolean,
+  verified: ?boolean,
 };
 
 export class Intro extends Component<any, State> {
   state = {
-    ordered: false,
+    verified: false,
   };
 
-  /*componentDidMount() {
-    cardOrderApi.hasOrder().then((ordered: boolean) => {
-      this.setState({ ordered });
-    });
-  }*/
-
   render() {
-    return this.state.ordered ? (
+    return this.state.verified ? (
       <AppRouter walletComingSoon />
     ) : (
       <div>
@@ -61,7 +55,7 @@ export class Intro extends Component<any, State> {
           </li>
         </ul>
         <Links>
-          <Link to={CARD_ORDER_PROFILE_ROUTE}>
+          <Link to={VERIFICATION_PROFILE_ROUTE}>
             <PrimaryButton>Let’s get started</PrimaryButton>
           </Link>
           <Link to={routes.LOGOUT}>

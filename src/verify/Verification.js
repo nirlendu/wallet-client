@@ -3,7 +3,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import styled from 'styled-components';
 import { Header, PrimaryButton, Top, SubHeader, WrappedContent } from '../ui';
-import { CARD_ORDER_INTRO_ROUTE } from './constants';
+import { VERIFICATION_INTRO_ROUTE } from './constants';
 
 export type Props = {};
 
@@ -25,7 +25,7 @@ export class Verification extends React.Component<any, State> {
         <div>You have completed the verification process</div>
       </WrappedContent>
     ) : (
-      <Redirect to={CARD_ORDER_INTRO_ROUTE} />
+      <Redirect to={VERIFICATION_INTRO_ROUTE} />
     );
   }
 }
