@@ -31,6 +31,7 @@ import { routes } from './router';
 import './index.css';
 import { GoogleTagManager } from './tracker';
 import { cardOrderRoutes } from './card/order';
+import verificationRoutes from './verify/routes';
 import ResetPassword, { ResetPasswordDone } from './user/password/reset';
 import UpdatePassword from './user/password/update';
 import Verification from './verify/Verification';
@@ -116,9 +117,11 @@ const startApp = () => {
                     component={authenticatedPage(Settings)}
                   />
                   <Route
+                    exact
                     path="/verify"
                     component={authenticatedPage(Verification)}
                   />
+                  {verificationRoutes}
                 </Switch>
                 <Route path="/sidebar">
                   {({ match }) => (
