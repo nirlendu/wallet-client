@@ -15,7 +15,8 @@ import {
   VERIFICATION_CONFIRM_ROUTE,
   VERIFICATION_DONE_ROUTE,
 } from './constants';
-import Profile from '../card/order/profile';
+import Profile from './profile';
+import AddressComponent from './address/AddressComponent';
 
 const introRoute = (
   <Route
@@ -35,4 +36,12 @@ const profileRoute = (
   />
 );
 
-export default [introRoute, profileRoute];
+const addressRoute = (
+  <Route
+    key={2}
+    path={VERIFICATION_ADDRESS_ROUTE}
+    component={requireAuthentication(verificationFlow(AddressComponent))}
+  />
+);
+
+export default [introRoute, profileRoute, addressRoute];

@@ -20,7 +20,7 @@ import {
   SelectField,
 } from '../../ui';
 import { profileFormSubmitHandler, withProfile } from '../../user/profile';
-import { CARD_ORDER_ADDRES_ROUTE } from '../constants';
+import { VERIFICATION_ADDRESS_ROUTE } from '../constants';
 import countryCodes from './countryCodes';
 
 const StyledHeader = styled(Header)`
@@ -31,7 +31,7 @@ type Props = {} & FormProps;
 
 export const Profile = ({ handleSubmit, error }: Props) => (
   <div>
-    <StyledHeader>Who are you?</StyledHeader>
+    <StyledHeader>Who are you? dsadsadsa</StyledHeader>
     <Form
       id="profileForm"
       onSubmit={handleSubmit(profileFormSubmitHandler)}
@@ -91,7 +91,7 @@ Profile.displayName = 'Profile';
 const ProfileForm = reduxForm({
   form: 'cardProfile',
   onSubmitSuccess: (result, dispatch) => {
-    dispatch(push(CARD_ORDER_ADDRES_ROUTE));
+    dispatch(push(VERIFICATION_ADDRESS_ROUTE));
   },
 })(withProfile(Profile));
 

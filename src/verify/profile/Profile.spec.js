@@ -3,7 +3,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Profile } from './Profile';
-import { Field, PrimaryButton, SelectField } from '../../../ui';
+import { Field, PrimaryButton, SelectField } from '../../ui';
 
 describe('Card ordering flow Profile', () => {
   let component;
