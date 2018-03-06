@@ -17,6 +17,7 @@ import {
 } from './constants';
 import Profile from './profile';
 import AddressComponent from './address/AddressComponent';
+import { IdVerification } from './verification/index';
 
 const introRoute = (
   <Route
@@ -44,4 +45,12 @@ const addressRoute = (
   />
 );
 
-export default [introRoute, profileRoute, addressRoute];
+const idVerificationRoute = (
+  <Route
+    key={2}
+    path={VERIFICATION_ID_VERIFICATION_ROUTE}
+    component={requireAuthentication(verificationFlow(IdVerification))}
+  />
+);
+
+export default [introRoute, profileRoute, addressRoute, idVerificationRoute];
