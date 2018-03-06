@@ -3,8 +3,8 @@ import React from 'react';
 import type { MapStateToProps } from 'react-redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import { Header, PrimaryButton } from '../../../ui';
-import { FormFeedback } from '../../../ui/form';
+import { Header, PrimaryButton } from '../../ui';
+import { FormFeedback } from '../../ui/form';
 import confirmRoutine from './confirmRoutine';
 
 const StyledHeader = styled(Header)`

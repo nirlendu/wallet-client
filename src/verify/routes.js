@@ -17,7 +17,9 @@ import {
 } from './constants';
 import Profile from './profile';
 import AddressComponent from './address/AddressComponent';
-import { IdVerification } from './verification/index';
+import { IdVerification, AddressVerification } from './verification/index';
+import Done from './done';
+import Confirm from './confirm';
 
 const introRoute = (
   <Route
@@ -53,4 +55,36 @@ const idVerificationRoute = (
   />
 );
 
-export default [introRoute, profileRoute, addressRoute, idVerificationRoute];
+const addressVerificationRoute = (
+  <Route
+    key={3}
+    path={VERIFICATION_ADDRESS_VERIFICATION_ROUTE}
+    component={requireAuthentication(verificationFlow(AddressVerification))}
+  />
+);
+
+const confirmRoute = (
+  <Route
+    key={4}
+    path={VERIFICATION_CONFIRM_ROUTE}
+    component={requireAuthentication(verificationFlow(Confirm))}
+  />
+);
+
+const doneRoute = (
+  <Route
+    key={5}
+    path={VERIFICATION_DONE_ROUTE}
+    component={authenticatedPage(verificationFlow(Done))}
+  />
+);
+
+export default [
+  introRoute,
+  profileRoute,
+  addressRoute,
+  idVerificationRoute,
+  addressVerificationRoute,
+  confirmRoute,
+  doneRoute,
+];

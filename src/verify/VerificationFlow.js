@@ -111,7 +111,7 @@ export const verificationFlow = (WrappedComponent: *) => {
   });
 
   const connectedFlow = connect(mapStateToProps)(flow);
-  connectedFlow.displayName = `cardOrderFlow(${WrappedComponent.name})`;
+  connectedFlow.displayName = `verificationFlow(${WrappedComponent.name})`;
 
   return connectedFlow;
 };

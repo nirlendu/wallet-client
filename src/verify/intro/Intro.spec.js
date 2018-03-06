@@ -5,10 +5,10 @@ import { shallow } from 'enzyme';
 import { Link } from 'react-router-dom';
 import { Intro } from './Intro';
 import { PrimaryButton, Button } from '../../ui';
-import { CARD_ORDER_PROFILE_ROUTE } from '../constants';
+import { VERIFICATION_PROFILE_ROUTE } from '../constants';
 import { routes } from '../../router';
 
-jest.mock('../cardOrderApi', () => ({
+jest.mock('../../card/order/cardOrderApi', () => ({
   hasOrder: jest.fn(() => Promise.resolve(false)),
 }));
 
@@ -27,7 +27,7 @@ describe('Card ordering flow Intro', () => {
     expect(
       component
         .find(Link)
-        .find({ to: CARD_ORDER_PROFILE_ROUTE })
+        .find({ to: VERIFICATION_PROFILE_ROUTE })
         .find(PrimaryButton).length,
     ).toBe(1);
   });

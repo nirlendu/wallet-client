@@ -3,7 +3,7 @@
 import config from 'react-global-configuration';
 import { type Address } from './addressState';
 
-jest.mock('../../../http');
+jest.mock('../../http');
 
 const mockHttp = require('../../http');
 

@@ -8,10 +8,10 @@ import {
   it,
   specs,
   storiesOf,
-} from '../../../../.storybook/facade';
-import cardOrderFlow from '../cardOrderFlow';
+} from '../../../.storybook/facade';
+import verificationFlow from '../VerificationFlow';
 import { Confirm } from './Confirm';
-import { FormFeedback } from '../../../ui/form';
+import { FormFeedback } from '../../ui/form';
 
 storiesOf('Card Ordering', module).add('Confirm', () => {
   specs(() =>
@@ -40,6 +40,6 @@ storiesOf('Card Ordering', module).add('Confirm', () => {
     }),
   );
 
-  const Component = cardOrderFlow(Confirm);
+  const Component = verificationFlow(Confirm);
   return <Component />;
 });
