@@ -1,9 +1,9 @@
 // @flow
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import styled from 'styled-components';
 import { Header, PrimaryButton, Top, SubHeader, WrappedContent } from '../ui';
 import { VERIFICATION_INTRO_ROUTE } from './constants';
+import Done from './done';
 
 export type Props = {};
 
@@ -22,7 +22,7 @@ export class Verification extends React.Component<any, State> {
     }
     return this.state.verified ? (
       <WrappedContent>
-        <div>You have completed the verification process</div>
+        <Done />
       </WrappedContent>
     ) : (
       <Redirect to={VERIFICATION_INTRO_ROUTE} />
