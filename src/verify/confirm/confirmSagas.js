@@ -2,7 +2,7 @@
 import { call, type IOEffect, put, takeLatest } from 'redux-saga/effects';
 import { push } from 'react-router-redux';
 import confirmRoutine from './confirmRoutine';
-import cardOrderApi from '../../card/order/cardOrderApi';
+import cardOrderApi from '../cardOrderApi';
 import { routes } from '../../router';
 
 export function* createOrder(): Generator<IOEffect, void, *> {

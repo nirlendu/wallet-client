@@ -1,13 +1,13 @@
 // @flow
 
 import config from 'react-global-configuration';
-import type { VerificationFile } from './verificationApi';
+import type { VerificationFile } from './verificationFilesApi';
 
 jest.mock('../../http');
 
 const mockHttp = require('../../http');
 
-const verificationApi = require('./verificationApi').default;
+const verificationApi = require('./verificationFilesApi').default;
 
 describe('verification file api', () => {
   const apiUrl = 'sample-api-url';

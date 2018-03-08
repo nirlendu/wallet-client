@@ -2,8 +2,8 @@
 import { call, put, takeEvery, type IOEffect } from 'redux-saga/effects';
 import type RoutineAction from 'redux-saga-routines';
 import verificationRoutine from './verificationRoutine';
-import verificationApi from './verificationApi';
-import type { VerificationFile } from './verificationApi';
+import verificationApi from './verificationFilesApi';
+import type { VerificationFile } from './verificationFilesApi';
 
 export function* createVerificationFile(
   action: RoutineAction,

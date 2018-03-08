@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import AppRouter, { routes } from '../../router';
 import { Button, Header, Paragraph, PrimaryButton, Top } from '../../ui';
-// import cardOrderApi from '../cardOrderApi';
 import { VERIFICATION_PROFILE_ROUTE } from '../constants';
 
 const StyledHeader = styled(Header)`

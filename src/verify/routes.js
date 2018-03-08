@@ -17,7 +17,7 @@ import {
 } from './constants';
 import Profile from './profile';
 import AddressComponent from './address/AddressComponent';
-import { IdVerification, AddressVerification } from './verification/index';
+import { IdVerification, AddressVerification } from './verificationFiles';
 import Done from './done';
 import Confirm from './confirm';
 

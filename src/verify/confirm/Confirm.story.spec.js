@@ -13,7 +13,7 @@ import verificationFlow from '../VerificationFlow';
 import { Confirm } from './Confirm';
 import { FormFeedback } from '../../ui/form';
 
-storiesOf('Card Ordering', module).add('Confirm', () => {
+storiesOf('Verification', module).add('Confirm', () => {
   specs(() =>
     describe('Confirm', () => {
       let component;

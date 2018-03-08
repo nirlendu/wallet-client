@@ -14,7 +14,7 @@ import {
 } from '../../../.storybook/facade';
 import PlasticCard from '../../landing/PlasticCard';
 
-storiesOf('Card Ordering', module).add('Done', () => {
+storiesOf('Verification', module).add('Done', () => {
   specs(() =>
     describe('Done', () => {
       let component;

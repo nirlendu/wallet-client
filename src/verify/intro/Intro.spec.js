@@ -8,11 +8,7 @@ import { PrimaryButton, Button } from '../../ui';
 import { VERIFICATION_PROFILE_ROUTE } from '../constants';
 import { routes } from '../../router';
 
-jest.mock('../../card/order/cardOrderApi', () => ({
-  hasOrder: jest.fn(() => Promise.resolve(false)),
-}));
-
-describe('Card ordering flow Intro', () => {
+describe('Verification flow Intro', () => {
   let component;
 
   beforeEach(() => {
