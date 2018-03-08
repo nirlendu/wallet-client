@@ -1,6 +1,6 @@
 // @flow
-import verification from './Verification';
+import Verification from './Verification';
 
-export { default as verification } from './Verification';
+export { default as Verification } from './Verification';
 
-export default verification;
+export default Verification;

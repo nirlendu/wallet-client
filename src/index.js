@@ -30,7 +30,6 @@ import { DefaultTheme } from './ui';
 import { routes } from './router';
 import './index.css';
 import { GoogleTagManager } from './tracker';
-import { cardOrderRoutes } from './card/order';
 import verificationRoutes from './verify/routes';
 import ResetPassword, { ResetPasswordDone } from './user/password/reset';
 import UpdatePassword from './user/password/update';
@@ -107,7 +106,6 @@ const startApp = () => {
                     path="/card"
                     component={authenticatedPage(Card)}
                   />
-                  {cardOrderRoutes}
                   <Route
                     path="/marketplace"
                     component={authenticatedPage(Marketplace)}

@@ -9,7 +9,7 @@ import {
 import {
   createOrUpdateAddressRoutine,
   fetchAddressRoutine,
-} from '../card/order/address/addressRoutine';
+} from '../verify/address/addressRoutine';
 import { createSecretRoutine as createMultiFactorAuth } from '../settings/multiFactorAuth/multiFactorAuthRoutines';
 
 const userReducer = (
