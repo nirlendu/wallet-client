@@ -30,10 +30,10 @@ import { DefaultTheme } from './ui';
 import { routes } from './router';
 import './index.css';
 import { GoogleTagManager } from './tracker';
-import verificationRoutes from './verify/routes';
+import verificationRoutes from './verification/routes';
 import ResetPassword, { ResetPasswordDone } from './user/password/reset';
 import UpdatePassword from './user/password/update';
-import Verification from './verify/Verification';
+import Verification from './verification/Verification';
 
 const animationEnter = keyframes`${slideInRight}`;
 

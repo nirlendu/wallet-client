@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import Verification from '../verify';
+import Verification from '../verification';
 
 export const Card = () => <Verification />;
 

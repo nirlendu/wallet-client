@@ -6,7 +6,7 @@ import type { MapStateToProps } from 'react-redux';
 import {} from '../user';
 import EmailPage from './EmailPage';
 import PasswordPage from './PasswordPage';
-import { VERIFICATION_INTRO_ROUTE } from '../verify/constants';
+import { VERIFICATION_INTRO_ROUTE } from '../verification/constants';
 
 export type Props = {
   authenticated: boolean,

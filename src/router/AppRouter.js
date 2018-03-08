@@ -2,7 +2,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import routes from './routes';
-import { VERIFICATION_INTRO_ROUTE } from '../verify/constants';
+import { VERIFICATION_INTRO_ROUTE } from '../verification/constants';
 
 type Props = {
   wallet: ?boolean,

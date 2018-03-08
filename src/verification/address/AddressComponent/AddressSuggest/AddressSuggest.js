@@ -124,7 +124,8 @@ export class AddressSuggest extends React.Component<Props, State> {
                   </FormGroup>
                 </ReactGooglePlacesSuggest>
               </div>
-            )}
+            )
+          }
         />
       </div>
     );
