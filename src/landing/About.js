@@ -16,11 +16,15 @@ import imageAndras from './img/people/andras.jpg';
 import imageDragos from './img/people/dragos.jpg';
 import imageFrancisco from './img/people/francisco.jpg';
 import imageGustav from './img/people/gustav.jpg';
+import imageHelen from './img/people/helen.jpg';
 
 import imageKristjan from './img/people/kristjan.jpg';
 import imageLesly from './img/people/lesly.jpg';
 import imageMiguel from './img/people/miguel.jpg';
+import imageCofi from './img/people/cofi.jpg';
 import imageRoger from './img/people/roger.jpg';
+import imageLiisi from './img/people/liisi.jpg';
+
 import LogoStrip from './LogoStrip';
 import Team from './Team';
 import Timeline from './Timeline';
@@ -37,7 +41,7 @@ const Container = styled.div`
   width: 100%;
   padding: 96px 0 0;
   background: ${variables.colorWhite};
-  ${({ theme }) => breakpoint('tablet', theme.breakpoints)`
+  ${breakpoint('tablet')`
     padding: 0;
   `};
 `;
@@ -46,7 +50,7 @@ const CareersCTA = styled.div`
   color: ${variables.colorNeutral};
   margin: 48px 0;
   text-align: center;
-  ${({ theme }) => breakpoint('tablet', theme.breakpoints)`
+  ${breakpoint('tablet')`
   `};
 `;
 
@@ -133,6 +137,23 @@ export const About = () => (
           title: 'Partnerships',
           linkedin: 'http://bit.ly/2zuj9AS',
           image: imageDragos,
+        },
+        {
+          name: 'Liisi Eenmaa',
+          title: 'HR',
+          linkedin: 'http://bit.ly/2oKApNN',
+          image: imageLiisi,
+        },
+        {
+          name: 'Helen Kokk',
+          title: 'UX Designer',
+          linkedin: 'http://bit.ly/2GWukFM',
+          image: imageHelen,
+        },
+        {
+          name: 'Cofi',
+          title: 'Auditor',
+          image: imageCofi,
         },
       ]}
     />
